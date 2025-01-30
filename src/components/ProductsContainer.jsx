@@ -5,8 +5,6 @@ import { fetchProducts } from "./redux/products/productsAction"
 function ProductsContainer() {
 
     const productsData = useSelector(state => state.products);
-    console.log(productsData);
-    
 
     const dispatch = useDispatch();
 
@@ -24,4 +22,4 @@ function ProductsContainer() {
     )
 }
 
-export default ProductsContainer
+export default ProductsContainer;
