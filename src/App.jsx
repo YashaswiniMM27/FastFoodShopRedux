@@ -3,6 +3,9 @@ import { Provider } from "react-redux"
 import store from "./components/redux/store"
 import BurgerBox from "./components/burgerBox"
 import ProductsContainer from "./components/ProductsContainer"
+import PizzaView from "../feature/pizza/pizzaView"
+import BurgerView from "../feature/burger/burgerView"
+import store1 from "../app/store"
 
 
 function App() {
@@ -12,7 +15,11 @@ function App() {
     <Provider store={store}>
       <PizzaBox/>
       <BurgerBox/>
-      <ProductsContainer/>
+      {/* <ProductsContainer/> */}
+    </Provider>
+    <Provider store={store1}>
+      <PizzaView/>
+      <BurgerView/>
     </Provider>
     </>
   )
