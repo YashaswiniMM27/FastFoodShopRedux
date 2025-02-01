@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from "./redux/products/productsAction"
+import { fetchProducts } from './productSlice'
 
-function ProductsContainer() {
+function ProductsView() {
 
-    const productsData = useSelector(state => state.products);
+    const productsData = useSelector(state => state.product)
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])
-    
 
     return (
         <div className='container'>
@@ -23,4 +22,4 @@ function ProductsContainer() {
     )
 }
 
-export default ProductsContainer;
+export default ProductsView
